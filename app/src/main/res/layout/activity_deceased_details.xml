@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinner_states"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/spinner_background" />
+
+        <Spinner
+            android:id="@+id/spinner_age"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/spinner_background" />
+
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/spinner_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Start date"
+            android:layout_marginEnd="10dp"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:minHeight="35dp"
+            android:background="@drawable/curved_boarders_for_date"
+            android:id="@+id/start_date" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:minHeight="35dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/end_date"
+            android:hint="End date"
+            android:textSize="10sp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/curved_boarders_for_date" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:minHeight="35dp"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:background="@drawable/curved_boarders_for_date"
+            android:id="@+id/letsgo"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/second_activity_graph">
+
+        <com.example.covid19.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No of Deceased"
+            android:id="@+id/y_axis_label"
+            android:textColor="#000"
+            android:layout_marginEnd="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0dp"
+                    android:paddingEnd="10dp"
+                    android:id="@+id/page_chart" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/graph_progress_bar"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="download"
+        android:background="@drawable/list_item_borders"
+        android:id="@+id/actionSave"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary" />
+
+</LinearLayout>
